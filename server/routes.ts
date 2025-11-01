@@ -48,22 +48,26 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       const { message, walletAddress, conversationHistory } = chatRequestSchema.parse(req.body);
 
-      // Rate limiting temporarily disabled
-      // const clientIp = req.ip || req.socket.remoteAddress || "unknown";
-      // const ipCheck = checkIpRateLimit(clientIp);
-      // if (!ipCheck.allowed) {
-      //   return res.status(429).json({ error: ipCheck.error });
-      // }
+      // Rate limiting (configurable via RATE_LIMITING_ENABLED env var, defaults to true for safety)
+      const rateLimitingEnabled = process.env.RATE_LIMITING_ENABLED !== "false";
+      
+      if (rateLimitingEnabled) {
+        const clientIp = req.ip || req.socket.remoteAddress || "unknown";
+        const ipCheck = checkIpRateLimit(clientIp);
+        if (!ipCheck.allowed) {
+          return res.status(429).json({ error: ipCheck.error });
+        }
 
-      // const walletCheck = checkWalletRateLimit(walletAddress);
-      // if (!walletCheck.allowed) {
-      //   return res.status(429).json({ error: walletCheck.error, waitTime: walletCheck.waitTime });
-      // }
+        const walletCheck = checkWalletRateLimit(walletAddress);
+        if (!walletCheck.allowed) {
+          return res.status(429).json({ error: walletCheck.error, waitTime: walletCheck.waitTime });
+        }
 
-      // const dailyCheck = checkDailyLimit();
-      // if (!dailyCheck.allowed) {
-      //   return res.status(429).json({ error: dailyCheck.error });
-      // }
+        const dailyCheck = checkDailyLimit();
+        if (!dailyCheck.allowed) {
+          return res.status(429).json({ error: dailyCheck.error });
+        }
+      }
 
       const aiResponse = await generateChatResponse(message, conversationHistory || []);
 
@@ -97,9 +101,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
           explorerUrl: transferResult.explorerUrl,
         };
         
-        // if (transferResult.status === "success") {
-        //   incrementDailyCount();
-        // }
+        if (transferResult.status === "success" && rateLimitingEnabled) {
+          incrementDailyCount();
+        }
       } catch (error: any) {
         console.error("Transaction error:", error);
         

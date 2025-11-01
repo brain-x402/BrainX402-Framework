@@ -46,3 +46,4 @@ waitForPort = 5000
 
 [userenv.shared]
 SOLANA_NETWORK = "mainnet"
+RATE_LIMITING_ENABLED = "false"

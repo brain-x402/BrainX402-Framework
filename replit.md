@@ -80,7 +80,8 @@ Preferred communication style: Simple, everyday language.
 ### External Dependencies
 
 **AI Service**: Mistral AI
-- Model: `mistral-large-latest`
+- Model: `mistral-small-latest`
+- Temperature: 0.7
 - Handles natural language understanding and response generation
 - Conversation history maintained client-side and sent with each request
 - Requires `MISTRAL_API_KEY` environment variable
@@ -102,7 +103,9 @@ Preferred communication style: Simple, everyday language.
   - SOL balance check (minimum 0.01 SOL for gas fees)
   - USDC balance validation before transfers
   - Configurable minimum USDC buffer to prevent complete drainage
-  - Rate limiting: **Currently disabled** (code remains in codebase for future re-enablement)
+  - Rate limiting: **Configurable via RATE_LIMITING_ENABLED** (currently set to false for testing)
+    - When enabled: 5-min cooldown per wallet, 20 req/hour per IP, daily transfer limits
+    - When disabled: No rate limits (⚠️ Use with caution on mainnet!)
 - Uses `@solana/web3.js` and `@solana/spl-token` for blockchain interactions
 - Requires `SOLANA_PRIVATE_KEY` (base58 encoded) for transaction signing
 
@@ -142,6 +145,8 @@ The application supports flexible network configuration via environment variable
 
 - **SOLANA_NETWORK**: Network selection - `mainnet` or `devnet` (default: `mainnet`)
 - **TRANSFER_AMOUNT**: USDC transfer amount in smallest units (default: 1000 = 0.001 USDC)
+- **RATE_LIMITING_ENABLED**: Enable/disable rate limiting - `true` or `false` (default: `true`)
+  - ⚠️ **WARNING**: Setting to `false` on mainnet removes all transfer limits and exposes treasury to abuse
 - **DAILY_TRANSFER_LIMIT**: Maximum transfers per day (default: 100 for mainnet, 1000 for devnet)
 - **MIN_USDC_BUFFER**: Minimum USDC balance to maintain in sender wallet (default: 1.0 for mainnet, 0.01 for devnet)
 - **TRANSFERS_ENABLED**: Set to `false` to disable transfers completely (default: `true`)
