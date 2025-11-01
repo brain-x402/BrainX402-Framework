@@ -1,18 +1,38 @@
-import { sql } from "drizzle-orm";
-import { pgTable, text, varchar } from "drizzle-orm/pg-core";
-import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod";
 
-export const users = pgTable("users", {
-  id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
-  username: text("username").notNull().unique(),
-  password: text("password").notNull(),
+export const messageSchema = z.object({
+  id: z.string(),
+  role: z.enum(["user", "assistant"]),
+  content: z.string(),
+  timestamp: z.number(),
 });
 
-export const insertUserSchema = createInsertSchema(users).pick({
-  username: true,
-  password: true,
+export const transactionSchema = z.object({
+  signature: z.string(),
+  amount: z.number(),
+  recipient: z.string(),
+  timestamp: z.number(),
+  status: z.enum(["pending", "success", "failed"]),
+  error: z.string().optional(),
 });
 
-export type InsertUser = z.infer<typeof insertUserSchema>;
-export type User = typeof users.$inferSelect;
+export const chatRequestSchema = z.object({
+  message: z.string().min(1, "Message cannot be empty"),
+  walletAddress: z.string().min(32, "Invalid Solana wallet address"),
+  conversationHistory: z.array(messageSchema).optional(),
+});
+
+export const chatResponseSchema = z.object({
+  message: messageSchema,
+  transaction: transactionSchema.optional(),
+});
+
+export const validateWalletSchema = z.object({
+  address: z.string().min(32, "Invalid wallet address format"),
+});
+
+export type Message = z.infer<typeof messageSchema>;
+export type Transaction = z.infer<typeof transactionSchema>;
+export type ChatRequest = z.infer<typeof chatRequestSchema>;
+export type ChatResponse = z.infer<typeof chatResponseSchema>;
+export type ValidateWallet = z.infer<typeof validateWalletSchema>;
