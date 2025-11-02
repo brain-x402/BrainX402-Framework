@@ -19,7 +19,7 @@ const MAINNET_CONFIG: NetworkConfig = {
   explorerUrl: "https://solscan.io/tx",
   transferAmount: 1000,
   confirmationLevel: "confirmed",
-  minSolBalance: 0.001,
+  minSolBalance: 0.00005,
   minUsdcBuffer: 1.0,
   dailyTransferLimit: 100,
 };
@@ -31,7 +31,7 @@ const DEVNET_CONFIG: NetworkConfig = {
   explorerUrl: "https://solscan.io/tx",
   transferAmount: 1000,
   confirmationLevel: "confirmed",
-  minSolBalance: 0.001,
+  minSolBalance: 0.00005,
   minUsdcBuffer: 0.01,
   dailyTransferLimit: 1000,
 };

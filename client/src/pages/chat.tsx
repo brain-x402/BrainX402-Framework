@@ -708,7 +708,7 @@ function MessageBubble({ message, transaction }: { message: MessageWithTransacti
           <div className="w-6 h-6 rounded-lg bg-gradient-to-br from-white/90 to-white/70 flex items-center justify-center">
             <MessageSquare className="w-3.5 h-3.5 text-white" />
           </div>
-          <span className="text-xs font-medium text-muted-foreground">AI Assistant</span>
+          <span className="text-xs font-medium text-muted-foreground">BrainX</span>
         </div>
       )}
       
@@ -792,7 +792,7 @@ function TypingIndicator() {
         <div className="w-6 h-6 rounded-lg bg-gradient-to-br from-white/90 to-white/70 flex items-center justify-center">
           <MessageSquare className="w-3.5 h-3.5 text-white" />
         </div>
-        <span className="text-xs font-medium text-muted-foreground">AI Assistant</span>
+        <span className="text-xs font-medium text-muted-foreground">BrainX</span>
       </div>
       <div className="ml-8 bg-card/80 backdrop-blur border border-border/40 rounded-2xl px-5 py-4">
         <div className="flex gap-1.5">
