@@ -1,8 +1,8 @@
-# x402Pay: Decentralized Micropayments for IoT on Solana
+# BrainX: Decentralized Micropayments for IoT on Solana
 
 ## Project Vision
 
-**x402Pay** is a Solana-native decentralized payment infrastructure purpose-built for the IoT economy, implementing the "get-as-you-go" paradigm for instant micropayments. The project enables machine-to-machine (M2M) and human-to-machine (H2M) transactions using Solana's high throughput (40,000 TPS) and sub-second finality.
+**BrainX** is a Solana-native decentralized payment infrastructure purpose-built for the IoT economy, implementing the "get-as-you-go" paradigm for instant micropayments. The project enables machine-to-machine (M2M) and human-to-machine (H2M) transactions using Solana's high throughput (40,000 TPS) and sub-second finality.
 
 **📄 Full Whitepaper:** See `docs/x402pay-whitepaper.md` for comprehensive technical documentation, tokenomics, roadmap, and investment information.
 
@@ -11,21 +11,21 @@
 The codebase implements a **professional dual-purpose platform**:
 
 ### 1. Whitepaper Documentation Website
-- 9 professional dark-themed pages showcasing x402Pay vision and technology
-- Monochromatic dark blackish-gray theme (neutral grayscale aesthetics)
+- 9 professional dark-themed pages showcasing BrainX vision and technology
+- Black background with white font and elegant gradients
 - Persistent navigation header with mobile responsiveness
 - Sections: Home, Executive Summary, Introduction, Solution, x402 Sol, Device Identity, SDK, Tokenomics, Roadmap
-- Streamlined home page: Single "Get Started" CTA, simplified layout
+- Streamlined home page: "Brain" button for chat access, "Get Started" CTA for documentation
 
 ### 2. Proof-of-Concept Chat Application
-Professional AI chat interface demonstrating core payment infrastructure:
+Professional AI chat interface demonstrating core payment infrastructure where users earn 0.001 USDC per message:
 - **AI Integration**: Mistral AI-powered conversational interface
 - **Wallet Connection**: Phantom wallet integration with USDC micropayments (0.001 USDC per prompt)
 - **Network Support**: Solana mainnet/devnet with configurable rate limiting
 - **Professional UI**: 
   - Desktop sidebar with real-time network status, balance monitoring, and session statistics
   - Mobile-responsive overlay sidebar
-  - Monochromatic dark theme with subtle gray gradients
+  - Black background with white text and elegant gradient accents
   - Transaction tracking with blockchain explorer links
 - **Features**: Clear chat history, session statistics (messages, earnings, successful transactions), daily limit tracking
 
@@ -44,8 +44,8 @@ Preferred communication style: Simple, everyday language.
 **UI Component Library**: Shadcn/ui with Radix UI primitives, styled with Tailwind CSS using a custom design system based on the "new-york" style
 
 **Design Philosophy**: 
-- **Whitepaper Site**: Professional documentation design with monochromatic dark gray theme, technical sophistication through minimalist grayscale aesthetics, and deep hierarchies for complex content
-- **Chat Interface**: Modern conversational UI with sidebar-based layout, real-time status displays, and professional dark theme with subtle gray gradients
+- **Whitepaper Site**: Professional documentation design with black background and white font, technical sophistication through elegant white-to-gray gradients, and deep hierarchies for complex content
+- **Chat Interface**: Modern conversational UI with sidebar-based layout, real-time status displays, and professional black/white theme with gradient accents
 
 **State Management**: TanStack Query (React Query) for server state management with custom query client configuration. Local component state using React hooks for UI interactions.
 
@@ -55,16 +55,16 @@ Preferred communication style: Simple, everyday language.
 - **Chat Page**: 
   - Persistent sidebar (desktop) showing network status, SOL/USDC balances, daily transfer limits, and session statistics
   - Mobile-responsive overlay sidebar with hamburger menu
-  - Gray gradient send button (from-gray-600 to-gray-700)
+  - White gradient send button with black text
   - Enhanced message bubbles with AI avatar indicators
-  - Professional empty state with monochromatic branding
+  - Professional empty state with black/white gradient branding
   - Clear chat functionality with confirmation dialog
 - **Whitepaper Site**:
-  - Sticky navigation header with all sections accessible
-  - Dark blackish-gray theme with neutral gradients throughout
+  - Sticky navigation header with all sections accessible (BrainX branding)
+  - Pure black background with white text and elegant gradients throughout
   - Mobile-friendly responsive layout
   - Client-side routing for smooth transitions
-  - Streamlined home page (no version badge, "Built by" section, or "Try Demo" button)
+  - Home page features "Brain" button redirecting to chat (earn 0.001 USDC per message)
   - Cost display: "0.001 USDC" per prompt (not per transaction)
 
 ### Backend Architecture

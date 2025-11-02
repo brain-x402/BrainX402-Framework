@@ -1,17 +1,18 @@
-# Design Guidelines: x402Pay Whitepaper Platform
+# Design Guidelines: BrainX Whitepaper Platform
 
 ## Design Approach
 
-**Selected Approach:** Monochromatic Dark Professional Theme
+**Selected Approach:** Black and White Gradient Theme
 
-**Rationale:** Professional documentation site showcasing blockchain technology requires the credibility of enterprise-grade design systems. Using a sophisticated dark blackish-gray monochromatic palette to create a neutral, focused environment that emphasizes content over decoration.
+**Rationale:** Professional documentation site showcasing blockchain technology with a striking black background and white text, enhanced by elegant white-to-gray gradients for visual interest and depth.
 
 **Key Principles:**
-- Technical sophistication through minimalist grayscale aesthetic
-- Deep hierarchies for complex documentation
-- Subtle gray gradients for depth, not distraction
-- Trust through consistent, predictable patterns
-- Dark theme optimized for extended reading
+- Pure black (#000) background for maximum contrast
+- White (100% lightness) primary text for crisp readability
+- White-to-gray gradients for headlines and accents
+- Subtle white/10 borders and white/5 backgrounds for cards
+- Professional aesthetic with elegant gradient treatments
+- High contrast optimized for extended reading
 
 ---
 
@@ -67,36 +68,36 @@
 
 ### Hero Section
 - Full viewport height: min-h-screen
-- Background: Dark gradient from-black via-zinc-900/50 to-black
-- Title: Gray gradient from-gray-300 via-gray-200 to-gray-400
+- Background: Black gradient from-black via-zinc-900/50 to-black
+- Title: White gradient from-white via-gray-100 to-gray-300
 - Content positioning: Centered vertically, max-w-4xl
 - Elements stack: Logo mark, headline, subheadline (text-xl opacity-80), CTA
-- CTA buttons: Gray gradient background (from-gray-700 to-gray-800)
+- CTA buttons: White gradient background (from-white/90 to-white/70) with text-black
 - Button backgrounds: Hover elevation system, no explicit hover colors
 - Padding: px-8, py-32
 
 ### Executive Summary Section
 - 2-column layout on desktop: Left (prose content), Right (key metrics cards)
-- Background: Dark neutral gradient
-- Metrics cards: 2x2 grid, rounded-xl, p-6, gray borders (border-gray-700/40)
-- Feature cards: bg-gray-800/20 backdrop-blur-sm
-- Each metric: Large number (text-4xl), label (text-sm), gray icon (text-gray-300)
+- Background: Black gradient
+- Metrics cards: 2x2 grid, rounded-xl, p-6, white borders (border-white/10)
+- Feature cards: bg-white/5 backdrop-blur-sm
+- Each metric: Large number (text-4xl), label (text-sm), white icon (text-white)
 - Padding: py-24, px-8 md:px-12
 
 ### Technical Documentation Sections
 - Single column max-w-4xl centered
-- Section header with gray gradient text effect
-- Content blocks with p-8, rounded-xl, subtle gray border
-- Code blocks: Dark background, grayscale syntax highlighting, rounded-lg, p-6
-- Diagrams/illustrations: Full-width within container, rounded-lg, gray border
-- Side notes: Gray border-left with pl-6
+- Section header with white gradient text effect (from-white via-gray-100 to-gray-300)
+- Content blocks with p-8, rounded-xl, subtle white border (border-white/10)
+- Code blocks: Black background, white text, rounded-lg, p-6
+- Diagrams/illustrations: Full-width within container, rounded-lg, white border
+- Side notes: White border-left with pl-6
 - Spacing between blocks: space-y-8
 
 ### x402 Protocol Architecture Section
 - 3-column feature grid showcasing protocol layers
-- Cards: h-full, p-8, rounded-xl, gray border on hover
-- Icon (light gray text-gray-300), title, description
-- Background: Dark neutral gradient
+- Cards: h-full, p-8, rounded-xl, white border (border-white/10 bg-white/5)
+- Icon (white text-white), title, description
+- Background: Black gradient
 - Grid gap: gap-8
 
 ### Device Identity System Section
@@ -116,59 +117,59 @@
 ### Tokenomics Section
 - 2-column split: Left (pie chart/allocation visual), Right (breakdown list)
 - Allocation cards: Icon, percentage (text-3xl), category, description
-- Grayscale progress bars showing distribution
-- Total supply callout: Centered, large text with gray gradient
-- Background: Darkest section with neutral gradient
+- White/gray progress bars showing distribution
+- Total supply callout: Centered, large text with white gradient
+- Background: Pure black with gradient overlay
 - Padding: py-24
 
 ### Roadmap Section
-- Vertical timeline with gray connecting line
+- Vertical timeline with white connecting line
 - Milestone cards: Alternating left/right layout
 - Each milestone: Quarter, title, description, status badge
-- Status badges: Completed (light gray), In Progress (medium gray), Planned (dark gray)
-- Timeline line: Subtle gray gradient top-to-bottom
+- Status badges: Completed (white), In Progress (light gray), Planned (medium gray)
+- Timeline line: Subtle white-to-gray gradient top-to-bottom
 - Padding: py-24
 
 ### Footer
 - 4-column grid on desktop: Company, Product, Resources, Social
-- Newsletter signup form: Email input + gray gradient submit button
-- Network status badge: "Solana Devnet" pill with gray styling
+- Newsletter signup form: Email input + white gradient submit button
+- Network status badge: "Solana Devnet" pill with white styling
 - Bottom bar: Copyright, legal links, back-to-top button
-- Background: Deepest black with subtle gray top border
+- Background: Pure black with subtle white top border
 - Padding: pt-16 pb-8
 
 ---
 
 ## Color Palette
 
-**Theme:** Monochromatic Dark (Blackish-Gray)
+**Theme:** Black and White with Gradients
 
 **Primary Colors:**
-- Background: Very dark gray (0 0% 4%)
-- Card: Dark gray (0 0% 6%)
-- Sidebar: Dark gray (0 0% 8%)
-- Borders: Medium-dark gray (0 0% 15%)
+- Background: Pure black (0 0% 0%)
+- Card: Very dark gray (0 0% 8%)
+- Sidebar: Dark gray (0 0% 5%)
+- Borders: White with low opacity (border-white/10)
 
 **Text Colors:**
-- Primary text: Light gray (0 0% 95%)
-- Secondary text: Medium gray (0 0% 60%)
+- Primary text: Pure white (0 0% 100%)
+- Secondary text: Light gray (0 0% 70%)
 
 **Accent Colors:**
-- Primary accent: Light gray (0 0% 70%) - used for buttons, highlights
-- Icon colors: text-gray-300
-- Borders: border-gray-700/40
-- Backgrounds: bg-gray-800/20
+- Primary accent: Light gray (0 0% 85%) - used for buttons, highlights
+- Icon colors: text-white
+- Borders: border-white/10
+- Backgrounds: bg-white/5
 
 **Gradients:**
-- Title gradients: from-gray-300 via-gray-200 to-gray-400
-- Button gradients: from-gray-700 to-gray-800
-- Avatar/icon gradients: from-gray-600 to-gray-700
+- Title gradients: from-white via-gray-100 to-gray-300
+- Button gradients: from-white/90 to-white/70 with text-black
+- Secondary gradients: from-gray-100 to-gray-300
 - Page backgrounds: from-black via-zinc-900/50 to-black
 
 **Images:**
 Currently text-only design. Future imagery should use:
-- Monochromatic wireframe aesthetics
-- Grayscale technical schematics
+- High contrast black and white aesthetics
+- White wireframe graphics on black backgrounds
 - Minimal color, maximum clarity
 
 ---
@@ -204,18 +205,18 @@ Currently text-only design. Future imagery should use:
 - Gradient underline follows scroll position in navigation
 
 **Buttons:**
-- Primary: Gray gradient fill (from-gray-700 to-gray-800), light text, uses hover-elevate system
-- Secondary: Gray border, transparent fill, gray text
+- Primary: White gradient fill (from-white/90 to-white/70), black text, uses hover-elevate system
+- Secondary: White border (border-white/20), transparent fill, white text
 - Hover states: Automatic via elevation system, no manual hover colors needed
 
 **Cards:**
-- Gray borders (border-gray-700/40) with bg-gray-800/20
+- White borders (border-white/10) with bg-white/5
 - Uses hover-elevate system for interactions
 - No explicit glow effects, relies on subtle elevation changes
 
 **Code Blocks:**
 - Copy button appears on hover
-- Syntax highlighting using neutral grayscale tones
+- Syntax highlighting using white/gray tones
 - Line numbers in reduced opacity
 
 ---
@@ -232,4 +233,4 @@ Currently text-only design. Future imagery should use:
 
 ---
 
-This design establishes x402Pay as a sophisticated blockchain platform through premium monochromatic dark aesthetics, clear information architecture, and subtle grayscale hierarchy. The neutral color scheme allows content and functionality to take center stage while maintaining a professional, focused environment. The whitepaper content flows naturally from high-level vision (hero, executive summary) through technical depth (protocol, SDK) to future outlook (tokenomics, roadmap), creating a comprehensive narrative for investors, partners, and developers.
+This design establishes BrainX as a sophisticated blockchain platform through striking black and white aesthetics with elegant gradients, clear information architecture, and high-contrast visual hierarchy. The pure black background with white text and white-to-gray gradients creates maximum readability while maintaining a professional, modern environment. The whitepaper content flows naturally from high-level vision (hero, executive summary) through technical depth (protocol, SDK) to future outlook (tokenomics, roadmap), creating a comprehensive narrative for investors, partners, and developers.

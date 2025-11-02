@@ -225,7 +225,7 @@ export default function ChatPage() {
               <MessageSquare className="w-5 h-5 text-white" />
             </div>
             <div>
-              <h2 className="font-bold text-lg bg-gradient-to-r from-gray-300 to-gray-400 bg-clip-text text-transparent">
+              <h2 className="font-bold text-lg bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent">
                 AI Chat
               </h2>
               <p className="text-xs text-muted-foreground">Earn USDC per message</p>
@@ -301,7 +301,7 @@ export default function ChatPage() {
                     <TrendingUp className="w-4 h-4 text-gray-400" />
                     <span className="text-sm text-muted-foreground">Total Earned</span>
                   </div>
-                  <span className="text-2xl font-bold bg-gradient-to-r from-gray-400 to-gray-500 bg-clip-text text-transparent" data-testid="text-total-earned">
+                  <span className="text-2xl font-bold bg-gradient-to-r from-gray-100 to-gray-300 bg-clip-text text-transparent" data-testid="text-total-earned">
                     {stats.totalEarned}
                   </span>
                 </div>
@@ -347,7 +347,7 @@ export default function ChatPage() {
                   <MessageSquare className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <h2 className="font-bold text-lg bg-gradient-to-r from-gray-300 to-gray-400 bg-clip-text text-transparent">
+                  <h2 className="font-bold text-lg bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent">
                     AI Chat
                   </h2>
                   <p className="text-xs text-muted-foreground">Earn USDC per message</p>
@@ -425,7 +425,7 @@ export default function ChatPage() {
                         <TrendingUp className="w-4 h-4 text-gray-400" />
                         <span className="text-sm text-muted-foreground">Total Earned</span>
                       </div>
-                      <span className="text-2xl font-bold bg-gradient-to-r from-gray-400 to-gray-500 bg-clip-text text-transparent" data-testid="text-total-earned-mobile">
+                      <span className="text-2xl font-bold bg-gradient-to-r from-gray-100 to-gray-300 bg-clip-text text-transparent" data-testid="text-total-earned-mobile">
                         {stats.totalEarned}
                       </span>
                     </div>
@@ -483,7 +483,7 @@ export default function ChatPage() {
               </Button>
               <div className="lg:hidden flex items-center gap-2">
                 <MessageSquare className="w-5 h-5 text-primary" />
-                <h1 className="font-semibold bg-gradient-to-r from-gray-300 to-gray-400 bg-clip-text text-transparent">
+                <h1 className="font-semibold bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent">
                   AI Chat
                 </h1>
               </div>
@@ -514,7 +514,7 @@ export default function ChatPage() {
                       <MessageSquare className="w-10 h-10 text-white" />
                     </div>
                     <div className="space-y-3">
-                      <h2 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-gray-300 to-gray-400 bg-clip-text text-transparent">
+                      <h2 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent">
                         Start a Conversation
                       </h2>
                       <p className="text-muted-foreground max-w-md text-sm md:text-base">
