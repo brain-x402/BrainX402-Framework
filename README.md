@@ -18,7 +18,7 @@ Each interaction between user agents, AI systems, and blockchain nodes generates
 ## 🧬 Reverse Program Concept
 
 Traditionally:  
-> 🧾 You pay to use AI.
+> 🧾 You Get Pay to use AI.
 
 In **ReacotX402**:  
 > 💰 You earn when AI (or users) use your agents.
