@@ -77,15 +77,82 @@ The framework connects your **AI service logic** to Solana programs managing:
 
 ---
 
-## 🧰 Installation (Local Setup)
+⚙️ Installation & Setup
 
-```bash
-# Clone the repo
-git clone https://github.com/brain-x402/ReacotX402-Framework.git
-cd ReacotX402-Framework
+Follow these steps to install and run ReactorX402 locally.
 
-# Install dependencies
+1. Clone the Repository
+git clone https://github.com/brain-x402/ReactorX402-Framework.git
+cd ReactorX402-Framework
+
+2. Install Node.js Dependencies
+
+Used for front-end or control interface.
+
 npm install
+
+
+Make sure you have Node.js v18+ and npm v9+ installed.
+
+3. Set Up the Python AI Backend
+
+This module handles the local reasoning engine and neural computations.
+
+python server/index.py
+
+
+Note: Requires Python 3.9+ and packages listed in requirements.txt.
+Install them by running:
+
+pip install -r requirements.txt
+
+4. Configure Solana Environment
+
+ReactorX402’s computation logic is powered by Solana smart contracts.
+
+Install Solana CLI
+
+If you haven’t already:
+
+sh -c "$(curl -sSfL https://release.solana.com/v1.17.5/install)"
+
+
+Then verify:
+
+solana --version
+
+Configure Wallet
+solana-keygen new
+solana config set --url https://api.devnet.solana.com
+
+5. Build and Deploy Smart Contracts
+
+Compile the ReactorX402 Solana program (written in Rust):
+
+cargo build-bpf
+
+
+Deploy it to the network:
+
+solana program deploy target/deploy/ReactorX402.so
+
+
+On success, note the Program ID — this will be required for linking with the AI backend.
+
+🧠 Local Development Mode
+
+To run both AI and blockchain services together:
+
+npm run dev
+
+
+This initializes:
+
+The React/Node interface
+
+The Python AI Core
+
+The Solana connection laye
 
 # Run the local AI backend
 python server/index.py
